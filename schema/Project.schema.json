@@ -1,0 +1,150 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "App": {
+            "properties": {
+                "createdAt": {
+                    "format": "date-time",
+                    "type": "string"
+                },
+                "deleted": {
+                    "type": "boolean"
+                },
+                "description": {
+                    "maxLength": 65535,
+                    "minLength": 0,
+                    "type": "string"
+                },
+                "id": {
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "name": {
+                    "maxLength": 255,
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "osType": {
+                    "enum": [
+                        0,
+                        1
+                    ],
+                    "type": "number"
+                },
+                "score": {
+                    "maximum": 1,
+                    "minimum": -1,
+                    "type": "number"
+                },
+                "updatedAt": {
+                    "format": "date-time",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id",
+                "name",
+                "description",
+                "osType",
+                "score",
+                "deleted",
+                "createdAt",
+                "updatedAt"
+            ],
+            "type": "object"
+        },
+        "Apps": {
+            "description": "the list of App.",
+            "properties": {
+                "items": {
+                    "items": {
+                        "properties": {
+                            "createdAt": {
+                                "format": "date-time",
+                                "type": "string"
+                            },
+                            "deleted": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "maxLength": 65535,
+                                "minLength": 0,
+                                "type": "string"
+                            },
+                            "id": {
+                                "minimum": 1,
+                                "type": "integer"
+                            },
+                            "name": {
+                                "maxLength": 255,
+                                "minLength": 1,
+                                "type": "string"
+                            },
+                            "osType": {
+                                "enum": [
+                                    0,
+                                    1
+                                ],
+                                "type": "number"
+                            },
+                            "score": {
+                                "maximum": 1,
+                                "minimum": -1,
+                                "type": "number"
+                            },
+                            "updatedAt": {
+                                "format": "date-time",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "id",
+                            "name",
+                            "description",
+                            "osType",
+                            "score",
+                            "deleted",
+                            "createdAt",
+                            "updatedAt"
+                        ],
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "offset": {
+                    "default": 0,
+                    "minimum": 0,
+                    "type": "integer"
+                },
+                "page": {
+                    "default": 1,
+                    "minimum": 1,
+                    "type": "integer"
+                },
+                "size": {
+                    "default": 20,
+                    "maximum": 500,
+                    "minimum": 0,
+                    "type": "integer"
+                },
+                "total": {
+                    "minimum": 0,
+                    "type": "integer"
+                }
+            },
+            "required": [
+                "items",
+                "offset",
+                "size",
+                "page"
+            ],
+            "type": "object"
+        }
+    },
+    "required": [
+        "App",
+        "Apps"
+    ],
+    "type": "object"
+}
+

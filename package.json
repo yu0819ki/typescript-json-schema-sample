@@ -1,0 +1,15 @@
+{
+  "name": "typescript-json-schema-sample",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint": "tslint --project ./tsconfig.json",
+    "schema": "typescript-json-schema --required --no-refs ./tsconfig.json"
+  },
+  "author": "yu0819ki <yu0819ki@gmail.com> (https://github.com/yu0819ki)",
+  "license": "MIT",
+  "devDependencies": {
+    "tslint": "^5.0.0",
+    "typescript-json-schema": "^0.9.0"
+  }
+}
